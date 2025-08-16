@@ -34,15 +34,17 @@ def calc_mean(numbers):
 
 
 # メイン処理
-input_str = input("スペース区切りの整数を入力してください: ")
-input_list = input_str.split()
-numbers = []
-for item in input_list:
-    numbers.append(int(item))
+def main():
+    input_str = input("データを入力してください(スペース区切り)> ")
+    input_list = input_str.split()
+    numbers = []
+    for item in input_list:
+        numbers.append(int(item))
 
 # 結果表示
-print("合計値:", calc_sum(numbers))
-print("最大値:", calc_max(numbers))
-print("最小値:", calc_min(numbers))
-print("平均値:", format(calc_mean(numbers), ".1f"))
+    print("合計値:", calc_sum(numbers))
+    print("最大値:", calc_max(numbers))
+    print("平均値:", format(calc_mean(numbers), ".1f"))
 
+if __name__ == "__main__":
+    main()
